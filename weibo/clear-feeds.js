@@ -8,6 +8,7 @@
         return;
     }
     try {
+        if(!confirm('确定清空微博!!!')) return;
         var s = document.createElement("script");
         s.type = "text/javascript";
         s.src = "//lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js";
