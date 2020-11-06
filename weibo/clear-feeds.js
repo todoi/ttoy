@@ -81,7 +81,7 @@
                     return alert("清空微博成功!");
                 }
                 function loopDelete() {
-                    dtimer = setTimeout(() => {
+                    dtimer = setTimeout(function() {
                         clearTimeout(dtimer)
                         const $feed = $feedNodes[index];
                         var mid = $($feed).attr("mid");
