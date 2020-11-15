@@ -1,0 +1,47 @@
+{
+    "name": "右键点击下载图片",
+    "version": "1.0",
+    "description": "Auto download image by mouse right click",
+    "permissions": [
+        "storage",
+        "downloads",
+        "activeTab",
+        "declarativeContent",
+        "contextMenus",
+        "webNavigation",
+        "webRequest",
+        "http://*/",
+        "https://*/"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "右键点击下载图片",
+        "default_icon": {
+            "16": "images/download-icon-16.png",
+            "32": "images/download-icon-32.png",
+            "48": "images/download-icon-48.png",
+            "128": "images/download-icon-128.png"
+        }
+    },
+	"content_scripts": 
+	[
+		{
+			"matches": ["<all_urls>"],
+			"js": ["js/jquery-1.12.4.js", "js/content-script.js"],
+			"run_at": "document_end"
+		}
+    ],
+    "web_accessible_resources": ["js/inject-script.js"],
+    "options_page": "options.html",
+    "icons": {
+        "16": "images/download-icon-16.png",
+        "32": "images/download-icon-32.png",
+        "48": "images/download-icon-48.png",
+        "128": "images/download-icon-128.png"
+    },
+    "manifest_version": 2
+}

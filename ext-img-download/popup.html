@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *, ul, ol, li{
+            border: 0;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .container {
+            width: 140px;
+            height: 80px;
+            text-align: center;
+            padding: 10px;
+        }
+        .container li {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="container">
+        <li>
+            <input type="checkbox" id="checkRightClick" /><label for="checkRightClick"> 右键点击直接下载</label>
+        </li>
+    </ul>
+    <script src="popup.js"></script>
+</body>
+
+
+</html>
